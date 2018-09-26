@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="debug|Win32">
+			<Configuration>debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{2F9E8CE6-59B0-441D-9EAD-0A86496D990C}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<RootNamespace>delta</RootNamespace>
+		<Platform>Win32</Platform>
+		<ProjectName>delta</ProjectName>
+		<WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+	<PropertyGroup Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<PlatformToolset>v141</PlatformToolset>
+		<WholeProgramOptimization>false</WholeProgramOptimization>
+		<BasicRuntimeChecks>Default</BasicRuntimeChecks>
+		<FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+		<DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+		<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+		<Optimization>Disabled</Optimization>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir>.\</OutDir>
+		<IntDir>cmdline@@delta@exe\</IntDir>
+		<TargetName>delta</TargetName>
+		<TargetExt>.exe</TargetExt>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<MinimalRebuild>true</MinimalRebuild>
+			<FunctionLevelLinking>true</FunctionLevelLinking>
+			<PrecompiledHeader/>
+			<WarningLevel>Level2</WarningLevel>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions/>
+		</ResourceCompile>
+		<Link>
+			<GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+			<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\src\libdeltachat.a;..\libs\zlib-1.2.11\libz.a;..\libs\openssl\libcrypto.a;..\libs\cyrussasl\libsals2.a;..\libs\sqlite\libsqlite.a;..\libs\libetpan\libetpan.a;..\libs\netpgp\libnetpgp.a;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)delta.exe</OutputFile>
+			<SubSystem>Console</SubSystem>
+			<ProgramDataBaseFileName>$(OutDir}delta.pdb</ProgramDataBaseFileName>
+			<EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<CLCompile Include="..\..\cmdline\cmdline.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>cmdline@@delta@exe;.;..\..\cmdline;..\..\src\.;..\src;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)cmdline.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\cmdline\stress.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>cmdline@@delta@exe;.;..\..\cmdline;..\..\src\.;..\src;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)stress.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\cmdline\main.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>cmdline@@delta@exe;.;..\..\cmdline;..\..\src\.;..\src;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)main.c.obj</ObjectFileName>
+		</CLCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="C:\Users\micro\deltachat\deltachat-core\winbuild\REGEN.vcxproj">
+			<Project>{D11EB3B8-5662-46E6-A2AE-3170C03D702C}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

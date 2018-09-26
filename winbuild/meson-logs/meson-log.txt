@@ -1,0 +1,350 @@
+Build started at 2018-09-26T15:29:09.677035
+Main binary: C:\Program Files\Python37\python.exe
+Python system: Windows
+The Meson build system
+Version: 0.47.2
+Source dir: C:\Users\micro\deltachat\deltachat-core
+Build dir: C:\Users\micro\deltachat\deltachat-core\winbuild
+Build type: native build
+Project name: deltachat-core
+Project version: undefined
+Sanity testing C compiler: cl
+Is cross compiler: False.
+Sanity check compiler command line: cl C:\Users\micro\deltachat\deltachat-core\winbuild\meson-private\sanitycheckc.c /FeC:\Users\micro\deltachat\deltachat-core\winbuild\meson-private\sanitycheckc.exe
+Sanity check compile stdout:
+sanitycheckc.c
+Microsoft (R) Incremental Linker Version 14.15.26730.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:C:\Users\micro\deltachat\deltachat-core\winbuild\meson-private\sanitycheckc.exe 
+sanitycheckc.obj 
+
+-----
+Sanity check compile stderr:
+Microsoft (R) C/C++-Optimierungscompiler Version 19.15.26730 f�r x86
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+
+-----
+Running test binary command: C:\Users\micro\deltachat\deltachat-core\winbuild\meson-private\sanitycheckc.exe
+Native C compiler: cl (msvc 19.15.26730)
+Build machine cpu family: x86
+Build machine cpu: x86
+Dependency threads found: YES
+Found Pkg-config: NO
+Looking for a fallback subproject for the dependency zlib
+Using zlib from cache.
+Using zlib-1.2.11-3-wrap.zip from cache.
+
+
+Executing subproject zlib 
+
+Project name: zlib
+Project version: 1.2.11
+Native C compiler: cl (msvc 19.15.26730)
+Build targets in project: 2
+
+Subproject zlib finished.
+Dependency zlib from subproject libs\zlib found: YES
+Looking for a fallback subproject for the dependency openssl
+
+
+Executing subproject openssl 
+
+Project name: openssl
+Project version: 1.0.1t
+Native C compiler: cl (msvc 19.15.26730)
+Dependency zlib from subproject libs\zlib found: YES (cached)
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmpde5y9x0j
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmpde5y9x0j\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmpde5y9x0j\output.obj /Od -Wno-unused-value -Wunused-value 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-unused-value.
+
+Compiler for C supports arguments -Wno-unused-value -Wunused-value: NO
+Build targets in project: 3
+
+Subproject openssl finished.
+Dependency openssl from subproject libs\openssl found: YES
+Looking for a fallback subproject for the dependency libsasl2
+
+
+Executing subproject cyrussasl 
+
+Project name: cyrussasl
+Project version: 2.1.25
+Native C compiler: cl (msvc 19.15.26730)
+Dependency openssl from subproject libs\openssl found: YES (cached)
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmp9w3s6jah
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmp9w3s6jah\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmp9w3s6jah\output.obj /Od -Wno-discarded-qualifiers -Wdiscarded-qualifiers 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-discarded-qualifiers.
+
+Compiler for C supports arguments -Wno-discarded-qualifiers -Wdiscarded-qualifiers: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmpx2xz1sq6
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmpx2xz1sq6\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmpx2xz1sq6\output.obj /Od -Wno-format -Wformat 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-format.
+
+Compiler for C supports arguments -Wno-format -Wformat: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmp_a5ppks0
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmp_a5ppks0\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmp_a5ppks0\output.obj /Od -Wno-incompatible-pointer-types -Wincompatible-pointer-types 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-incompatible-pointer-types.
+
+Compiler for C supports arguments -Wno-incompatible-pointer-types -Wincompatible-pointer-types: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmpb1pgv8oo
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmpb1pgv8oo\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmpb1pgv8oo\output.obj /Od -Wno-nonnull-compare -Wnonnull-compare 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-nonnull-compare.
+
+Compiler for C supports arguments -Wno-nonnull-compare -Wnonnull-compare: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmpyixtjdhd
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmpyixtjdhd\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmpyixtjdhd\output.obj /Od -Wno-pointer-sign -Wpointer-sign 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-pointer-sign.
+
+Compiler for C supports arguments -Wno-pointer-sign -Wpointer-sign: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmpbibl3jx1
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmpbibl3jx1\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmpbibl3jx1\output.obj /Od -Wno-tautological-compare -Wtautological-compare 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-tautological-compare.
+
+Compiler for C supports arguments -Wno-tautological-compare -Wtautological-compare: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmpfas87elb
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmpfas87elb\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmpfas87elb\output.obj /Od -Wno-unused-but-set-variable -Wunused-but-set-variable 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-unused-but-set-variable.
+
+Compiler for C supports arguments -Wno-unused-but-set-variable -Wunused-but-set-variable: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmphr_rmscn
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmphr_rmscn\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmphr_rmscn\output.obj /Od -Wno-unused-const-variable -Wunused-const-variable 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-unused-const-variable.
+
+Compiler for C supports arguments -Wno-unused-const-variable -Wunused-const-variable: NO
+Using cached compile:
+Cached command line:  cl C:\Users\micro\AppData\Local\Temp\tmphr_rmscn\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmphr_rmscn\output.obj /Od -Wno-unused-const-variable -Wunused-const-variable 
+
+Code:
+ int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-unused-const-variable.
+
+Compiler for C supports arguments -Wno-unused-const-variable -Wunused-const-variable: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmpgfw3nak2
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmpgfw3nak2\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmpgfw3nak2\output.obj /Od -Wno-unused-function -Wunused-function 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-unused-function.
+
+Compiler for C supports arguments -Wno-unused-function -Wunused-function: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmp89nc4w7n
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmp89nc4w7n\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmp89nc4w7n\output.obj /Od -Wno-unused-variable -Wunused-variable 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-unused-variable.
+
+Compiler for C supports arguments -Wno-unused-variable -Wunused-variable: NO
+Build targets in project: 4
+
+Subproject cyrussasl finished.
+Dependency libsasl2 from subproject libs\cyrussasl found: YES
+Looking for a fallback subproject for the dependency sqlite3
+
+
+Executing subproject sqlite 
+
+Project name: sqlite
+Project version: 3.23.1
+Native C compiler: cl (msvc 19.15.26730)
+Dependency threads found: YES (cached)
+Using cached compile:
+Cached command line:  cl C:\Users\micro\AppData\Local\Temp\tmpgfw3nak2\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmpgfw3nak2\output.obj /Od -Wno-unused-function -Wunused-function 
+
+Code:
+ int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-unused-function.
+
+Compiler for C supports arguments -Wno-unused-function -Wunused-function: NO
+Build targets in project: 5
+
+Subproject sqlite finished.
+Dependency sqlite3 from subproject libs\sqlite found: YES
+Program libetpan-config found: NO
+
+
+Executing subproject libetpan 
+
+Project name: etpan
+Project version: 1.8
+Native C compiler: cl (msvc 19.15.26730)
+Dependency threads found: YES (cached)
+Dependency zlib from subproject libs\zlib found: YES (cached)
+Dependency openssl from subproject libs\openssl found: YES (cached)
+Dependency sqlite3 from subproject libs\sqlite found: YES (cached)
+Dependency libsasl2 from subproject libs\cyrussasl found: YES (cached)
+Using cached compile:
+Cached command line:  cl C:\Users\micro\AppData\Local\Temp\tmpgfw3nak2\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmpgfw3nak2\output.obj /Od -Wno-unused-function -Wunused-function 
+
+Code:
+ int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-unused-function.
+
+Compiler for C supports arguments -Wno-unused-function -Wunused-function: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmposeqbiei
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmposeqbiei\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmposeqbiei\output.obj /Od -Wno-format-truncation -Wformat-truncation 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-format-truncation.
+
+Compiler for C supports arguments -Wno-format-truncation -Wformat-truncation: NO
+Running compile:
+Working directory:  C:\Users\micro\AppData\Local\Temp\tmphxtett33
+Command line:  cl C:\Users\micro\AppData\Local\Temp\tmphxtett33\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmphxtett33\output.obj /Od -Wno-misleading-indentation -Wmisleading-indentation 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-misleading-indentation.
+
+Compiler for C supports arguments -Wno-misleading-indentation -Wmisleading-indentation: NO
+Build targets in project: 6
+
+Subproject libetpan finished.
+
+
+Executing subproject netpgp 
+
+Project name: netpgp
+Project version: 20140220
+Native C compiler: cl (msvc 19.15.26730)
+Dependency threads found: YES (cached)
+Dependency zlib from subproject libs\zlib found: YES (cached)
+Dependency openssl from subproject libs\openssl found: YES (cached)
+Using cached compile:
+Cached command line:  cl C:\Users\micro\AppData\Local\Temp\tmphxtett33\testfile.c /nologo /showIncludes /c /FoC:\Users\micro\AppData\Local\Temp\tmphxtett33\output.obj /Od -Wno-misleading-indentation -Wmisleading-indentation 
+
+Code:
+ int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ cl : Befehlszeile error D8021 : Ung�ltiges numerisches Argument /Wno-misleading-indentation.
+
+Compiler for C supports arguments -Wno-misleading-indentation -Wmisleading-indentation: NO
+Build targets in project: 7
+
+Subproject netpgp finished.
+Running command: C:\Program Files\Git\cmd\git.EXE describe --tags
+--- stdout ---
+v0.20.0-183-g0525cb86
+
+--- stderr ---
+
+
+Build targets in project: 9
+Generating vcxproj Windows resource for file 'libs__zlib-1.2.11__win32_zlib1.rc'.
+Generating vcxproj z.
+Generating vcxproj crypto.
+Generating vcxproj sals2.
+Generating vcxproj sqlite.
+Generating vcxproj etpan.
+Generating vcxproj netpgp.
+Generating vcxproj deltachat.
+Generating vcxproj delta.

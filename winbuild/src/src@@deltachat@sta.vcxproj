@@ -1,0 +1,302 @@
+<?xml version="1.0" ?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="debug|Win32">
+			<Configuration>debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{85537EEF-B84E-4BE5-8948-5F6100EAC838}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<RootNamespace>deltachat</RootNamespace>
+		<Platform>Win32</Platform>
+		<ProjectName>deltachat</ProjectName>
+		<WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+	<PropertyGroup Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<PlatformToolset>v141</PlatformToolset>
+		<WholeProgramOptimization>false</WholeProgramOptimization>
+		<BasicRuntimeChecks>Default</BasicRuntimeChecks>
+		<FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+		<DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+		<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+		<Optimization>Disabled</Optimization>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir>.\</OutDir>
+		<IntDir>src@@deltachat@sta\</IntDir>
+		<TargetName>libdeltachat</TargetName>
+		<TargetExt>.a</TargetExt>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<MinimalRebuild>true</MinimalRebuild>
+			<FunctionLevelLinking>true</FunctionLevelLinking>
+			<PrecompiledHeader/>
+			<WarningLevel>Level2</WarningLevel>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions/>
+		</ResourceCompile>
+		<Link>
+			<GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+			<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\libs\zlib-1.2.11\libz.a;..\libs\openssl\libcrypto.a;..\libs\cyrussasl\libsals2.a;..\libs\sqlite\libsqlite.a;..\libs\libetpan\libetpan.a;..\libs\netpgp\libnetpgp.a;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)libdeltachat.a</OutputFile>
+			<SubSystem>Windows</SubSystem>
+			<ProgramDataBaseFileName>$(OutDir}deltachat.pdb</ProgramDataBaseFileName>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<CLCompile Include="..\..\src\dc_aheader.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_aheader.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_apeerstate.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_apeerstate.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_array.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_array.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_chat.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_chat.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_chatlist.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_chatlist.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_contact.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_contact.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_dehtml.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_dehtml.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_hash.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_hash.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_imap.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_imap.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_job.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_job.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_key.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_key.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_keyring.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_keyring.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_loginparam.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_loginparam.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_lot.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_lot.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_context.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_context.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_configure.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_configure.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_e2ee.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_e2ee.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_imex.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_imex.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_keyhistory.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_keyhistory.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_log.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_log.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_qr.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_qr.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_receive_imf.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_receive_imf.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_securejoin.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_securejoin.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_mimefactory.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_mimefactory.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_mimeparser.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_mimeparser.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_msg.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_msg.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_openssl.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_openssl.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_param.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_param.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_pgp.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_pgp.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_saxparser.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_saxparser.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_simplify.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_simplify.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_smtp.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_smtp.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_sqlite3.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_sqlite3.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_stock.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_stock.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_strbuilder.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_strbuilder.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_strencode.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_strencode.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_token.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_token.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_tools.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_tools.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\src\dc_uudecode.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>src@@deltachat@sta;.;..\..\src;..\..\src\.;..\..\libs\zlib-1.2.11\.;..\libs\zlib-1.2.11;..\..\libs\openssl\include;..\libs\openssl\include;..\..\libs\cyrussasl\include;..\libs\cyrussasl\include;..\..\libs\sqlite\.;..\libs\sqlite;..\..\libs\libetpan\include;..\libs\libetpan\include;..\..\libs\netpgp\include;..\libs\netpgp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)dc_uudecode.c.obj</ObjectFileName>
+		</CLCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="C:\Users\micro\deltachat\deltachat-core\winbuild\REGEN.vcxproj">
+			<Project>{D11EB3B8-5662-46E6-A2AE-3170C03D702C}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

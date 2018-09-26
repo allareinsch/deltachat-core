@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="debug|Win32">
+			<Configuration>debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{6582E242-9942-4C5F-8F9E-31E6AF7BA48C}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<RootNamespace>netpgp</RootNamespace>
+		<Platform>Win32</Platform>
+		<ProjectName>netpgp</ProjectName>
+		<WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+	<PropertyGroup Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<PlatformToolset>v141</PlatformToolset>
+		<WholeProgramOptimization>false</WholeProgramOptimization>
+		<BasicRuntimeChecks>Default</BasicRuntimeChecks>
+		<FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+		<DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+		<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+		<Optimization>Disabled</Optimization>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir>.\</OutDir>
+		<IntDir>libs@netpgp@@netpgp@sta\</IntDir>
+		<TargetName>libnetpgp</TargetName>
+		<TargetExt>.a</TargetExt>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<MinimalRebuild>true</MinimalRebuild>
+			<FunctionLevelLinking>true</FunctionLevelLinking>
+			<PrecompiledHeader/>
+			<WarningLevel>Level2</WarningLevel>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions/>
+		</ResourceCompile>
+		<Link>
+			<GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+			<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\libs\zlib-1.2.11\libz.a;..\..\libs\openssl\libcrypto.a;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)libnetpgp.a</OutputFile>
+			<SubSystem>Windows</SubSystem>
+			<ProgramDataBaseFileName>$(OutDir}netpgp.pdb</ProgramDataBaseFileName>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<CLCompile Include="..\..\..\libs\netpgp\src/compress.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_compress.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/create.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_create.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/crypto.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_crypto.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/keyring.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_keyring.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/misc.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_misc.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/openssl_crypto.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_openssl_crypto.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/packet-parse.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_packet-parse.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/packet-show.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_packet-show.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/reader.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_reader.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/signature.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_signature.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/symmetric.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_symmetric.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/validate.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_validate.c.obj</ObjectFileName>
+		</CLCompile>
+		<CLCompile Include="..\..\..\libs\netpgp\src/writer.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@netpgp@@netpgp@sta;.;..\..\..\libs\netpgp;..\..\..\libs\netpgp\include;include;..\..\..\libs\zlib-1.2.11\.;..\zlib-1.2.11;..\..\..\libs\openssl\include;..\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)src_writer.c.obj</ObjectFileName>
+		</CLCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="C:\Users\micro\deltachat\deltachat-core\winbuild\REGEN.vcxproj">
+			<Project>{D11EB3B8-5662-46E6-A2AE-3170C03D702C}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

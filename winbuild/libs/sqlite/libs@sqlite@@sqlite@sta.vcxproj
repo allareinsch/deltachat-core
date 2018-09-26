@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="debug|Win32">
+			<Configuration>debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{BD0CD69A-4E3F-454F-8BE4-2CF0F8B54EA4}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<RootNamespace>sqlite</RootNamespace>
+		<Platform>Win32</Platform>
+		<ProjectName>sqlite</ProjectName>
+		<WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+	<PropertyGroup Label="Configuration">
+		<ConfigurationType>StaticLibrary</ConfigurationType>
+		<CharacterSet>MultiByte</CharacterSet>
+		<PlatformToolset>v141</PlatformToolset>
+		<WholeProgramOptimization>false</WholeProgramOptimization>
+		<BasicRuntimeChecks>Default</BasicRuntimeChecks>
+		<FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+		<DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+		<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+		<Optimization>Disabled</Optimization>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+	<PropertyGroup>
+		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+		<OutDir>.\</OutDir>
+		<IntDir>libs@sqlite@@sqlite@sta\</IntDir>
+		<TargetName>libsqlite</TargetName>
+		<TargetExt>.a</TargetExt>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<MinimalRebuild>true</MinimalRebuild>
+			<FunctionLevelLinking>true</FunctionLevelLinking>
+			<PrecompiledHeader/>
+			<WarningLevel>Level2</WarningLevel>
+		</ClCompile>
+		<ResourceCompile>
+			<PreprocessorDefinitions/>
+		</ResourceCompile>
+		<Link>
+			<GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+			<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)libsqlite.a</OutputFile>
+			<SubSystem>Windows</SubSystem>
+			<ProgramDataBaseFileName>$(OutDir}sqlite.pdb</ProgramDataBaseFileName>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<CLCompile Include="..\..\..\libs\sqlite\sqlite3.c">
+			<AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+			<PreprocessorDefinitions>NULL=0;SOCKLEN_T=socklen_t;LOCALE_NOT_USED;_LARGEFILE_SOURCE=1;_FILE_OFFSET_BITS=64;SQLITE_OMIT_LOAD_EXTENSION;SQLITE_MAX_MMAP_SIZE=0;SQLITE_OMIT_WAL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalIncludeDirectories>libs@sqlite@@sqlite@sta;.;..\..\..\libs\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ObjectFileName>$(IntDir)sqlite3.c.obj</ObjectFileName>
+		</CLCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="C:\Users\micro\deltachat\deltachat-core\winbuild\REGEN.vcxproj">
+			<Project>{D11EB3B8-5662-46E6-A2AE-3170C03D702C}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>
