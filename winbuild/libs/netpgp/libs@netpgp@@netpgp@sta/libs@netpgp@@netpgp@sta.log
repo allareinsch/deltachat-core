@@ -1,0 +1,2 @@
+﻿  compress.c
+c:\users\micro\deltachat\deltachat-core\libs\netpgp\src\compress.c(55): fatal error C1083: Cannot open include file: 'sys/cdefs.h': No such file or directory

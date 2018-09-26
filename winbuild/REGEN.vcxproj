@@ -1,47 +1,47 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup Label="ProjectConfigurations">
-		<ProjectConfiguration Include="debug|Win32">
-			<Configuration>debug</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-	</ItemGroup>
-	<PropertyGroup Label="Globals">
-		<ProjectGuid>{8A6340FE-8931-4BE8-A9A1-48B0F1AFD6C7}</ProjectGuid>
-		<Keyword>Win32Proj</Keyword>
-		<Platform>Win32</Platform>
-		<ProjectName>REGEN</ProjectName>
-		<WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
-	</PropertyGroup>
-	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
-	<PropertyGroup Label="Configuration">
-		<ConfigurationType>Utility</ConfigurationType>
-		<CharacterSet>MultiByte</CharacterSet>
-		<UseOfMfc>false</UseOfMfc>
-		<PlatformToolset>v141</PlatformToolset>
-	</PropertyGroup>
-	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
-	<PropertyGroup>
-		<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-		<OutDir>.\</OutDir>
-		<IntDir>regen-temp\</IntDir>
-		<TargetName>REGEN</TargetName>
-	</PropertyGroup>
-	<ItemDefinitionGroup>
-		<Midl>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-			<OutputDirectory>$(IntDir)</OutputDirectory>
-			<HeaderFileName>%(Filename).h</HeaderFileName>
-			<TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-			<InterfaceIdentifierFilename>%(Filename)_i.c</InterfaceIdentifierFilename>
-			<ProxyFileName>%(Filename)_p.c</ProxyFileName>
-		</Midl>
-	</ItemDefinitionGroup>
-	<ItemGroup>
-		<CustomBuild Include="C:\Users\micro\deltachat\deltachat-core\winbuild\meson-private\regen.rule">
-			<Message>Checking whether solution needs to be regenerated.</Message>
-			<Command>setlocal
-&quot;C:\Program Files\Python37\python.exe&quot; &quot;C:\Program Files\Python37\Scripts\meson.py&quot; &quot;--internal&quot; &quot;regencheck&quot; &quot;C:\Users\micro\deltachat\deltachat-core\winbuild\meson-private&quot;
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug|Win32">
+      <Configuration>debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D11EB3B8-5662-46E6-A2AE-3170C03D702C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>REGEN</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir>.\</OutDir>
+    <IntDir>regen-temp\</IntDir>
+    <TargetName>REGEN</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFilename>%(Filename)_i.c</InterfaceIdentifierFilename>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\micro\deltachat\deltachat-core\winbuild\meson-private\regen.rule">
+      <Message>Checking whether solution needs to be regenerated.</Message>
+      <Command>setlocal
+"C:\Program Files\Python37\python.exe" "C:\Program Files\Python37\Scripts\meson.py" "--internal" "regencheck" "C:\Users\micro\deltachat\deltachat-core\winbuild\meson-private"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -49,10 +49,10 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-			<Outputs>C:\Users\micro\deltachat\deltachat-core\winbuild\meson-private\regen.stamp</Outputs>
-			<AdditionalInputs>..\meson.build;..\libs\zlib-1.2.11\meson.build;..\libs\openssl\meson.build;..\libs\cyrussasl\meson.build;..\libs\sqlite\meson.build;..\libs\libetpan\meson.build;..\libs\netpgp\meson.build;..\src\meson.build;..\cmdline\meson.build;meson-private/coredata.dat;..\meson_options.txt</AdditionalInputs>
-		</CustomBuild>
-	</ItemGroup>
-	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
-	<ImportGroup Label="ExtensionTargets"/>
+      <Outputs>C:\Users\micro\deltachat\deltachat-core\winbuild\meson-private\regen.stamp</Outputs>
+      <AdditionalInputs>..\meson.build;..\libs\zlib-1.2.11\meson.build;..\libs\openssl\meson.build;..\libs\cyrussasl\meson.build;..\libs\sqlite\meson.build;..\libs\libetpan\meson.build;..\libs\netpgp\meson.build;..\src\meson.build;..\cmdline\meson.build;meson-private/coredata.dat;..\meson_options.txt</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
 </Project>

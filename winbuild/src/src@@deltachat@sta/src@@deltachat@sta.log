@@ -1,0 +1,2 @@
+﻿  dc_aheader.c
+c:\users\micro\deltachat\deltachat-core\src\dc_context.h(33): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory

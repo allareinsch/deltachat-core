@@ -1,0 +1,16 @@
+﻿  adler32.c
+  crc32.c
+  deflate.c
+  infback.c
+  inffast.c
+  inflate.c
+  inftrees.c
+  trees.c
+  zutil.c
+  compress.c
+  uncompr.c
+  gzclose.c
+  gzlib.c
+  gzread.c
+  gzwrite.c
+  libs@zlib-1.2.11@@z@sta.vcxproj -> C:\Users\micro\deltachat\deltachat-core\winbuild\libs\zlib-1.2.11\.\libz.a
